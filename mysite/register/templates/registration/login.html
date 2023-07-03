@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  {% extends "main/base.html" %}
+
+  {% block title %}
+   Call
+  {% endblock %}
+
+  {% block content %}
+    <form method="post" class="form-group">
+        {% csrf_token %}
+        {{form}}
+        <p>Don't have an account? Create one <a href="/register">here</a></p>
+        <button type="submit" class="btn btn-success" name="login">Login</button>
+    </form>
+  {% endblock %}
+</body>
+</html>

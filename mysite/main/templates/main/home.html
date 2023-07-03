@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>freephone</title>
+</head>
+<body>
+    {% extends 'main/base.html' %}
+        {% block title %}
+            Home
+        {% endblock %}
+
+        {% block content %}
+         <h1> Home page </h1>
+        <h1>Usernames:</h1>
+          <ul>
+              {% for username in usernames %}
+                <li><a href="/call">{{ username }}</a></li>
+              {% endfor %}
+          </ul>
+        {% endblock %}
+</body>
+</html>
